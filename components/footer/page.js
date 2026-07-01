@@ -1,3 +1,5 @@
+import ScrollReveal from "../scroll-reveal/page";
+
 const footerLinks = [
   { label: "About Me", href: "#intro" },
   { label: "Skills", href: "#services" },
@@ -12,14 +14,14 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="site-footer" id="footer">
+    <ScrollReveal as="footer" className="site-footer" id="footer">
       <div className="footer-main">
-        <div>
+        <div className="scroll-reveal-item reveal-delay-1">
           <p className="footer-kicker">BASED IN NORWICH, UNITED KINGDOM</p>
           <h2>Let&apos;s build modern web experiences with clean frontend engineering.</h2>
         </div>
 
-        <div className="footer-contact">
+        <div className="footer-contact scroll-reveal-item reveal-delay-2">
           <span className="footer-title">Contact</span>
           <a href="mailto:rajvipanchal91@gmail.com">rajvipanchal91@gmail.com</a>
           <a href="tel:+447799377294">+44 7799377294</a>
@@ -31,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="footer-bottom scroll-reveal-item reveal-delay-3">
         <nav className="footer-links" aria-label="Footer navigation">
           {footerLinks.map((link) => (
             <a href={link.href} key={link.label}>{link.label}</a>
@@ -39,6 +41,6 @@ export default function Footer() {
         </nav>
         <p>Copyright 2026 Rajvi Panchal. All rights reserved.</p>
       </div>
-    </footer>
+    </ScrollReveal>
   );
 }

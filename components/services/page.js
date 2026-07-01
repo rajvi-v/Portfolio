@@ -1,5 +1,7 @@
+import ScrollReveal from "../scroll-reveal/page";
+
 const services = [
-    {
+  {
     icon: "AI",
     title: "Machine learning and computer vision",
     description:
@@ -29,7 +31,6 @@ const services = [
     description:
       "I connect frontend applications with backend services through RESTful APIs and use Postman to test, validate, and stabilize frontend-to-backend communication.",
   },
-
   {
     icon: "DB",
     title: "Databases and realtime data",
@@ -40,11 +41,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="services-section" id="services">
-      <h2 className="section-label">TECHNICAL SKILLS</h2>
+    <ScrollReveal className="services-section" id="services">
+      <h2 className="section-label scroll-reveal-item reveal-delay-1">TECHNICAL SKILLS</h2>
       <div className="services-grid">
-        {services.map((service) => (
-          <article className="service-card reveal-card" key={service.title} tabIndex="0">
+        {services.map((service, index) => (
+          <article className={`service-card reveal-card scroll-reveal-item reveal-delay-${index + 2}`} key={service.title} tabIndex="0">
             <div className="service-card-content reveal-card-content">
               <span className="service-icon" aria-hidden="true">{service.icon}</span>
               <h3>{service.title}</h3>
@@ -57,6 +58,6 @@ export default function Services() {
           </article>
         ))}
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

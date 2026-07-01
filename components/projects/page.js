@@ -1,3 +1,5 @@
+import ScrollReveal from "../scroll-reveal/page";
+
 const projects = [
   {
     title: "Intelligent Railway Chatbot",
@@ -15,11 +17,11 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="projects-section" id="projects">
-      <h2 className="section-label">PROJECTS</h2>
+    <ScrollReveal className="projects-section" id="projects">
+      <h2 className="section-label scroll-reveal-item reveal-delay-1">PROJECTS</h2>
       <div className="projects-grid">
-        {projects.map((project) => (
-          <article className="project-card reveal-card" key={project.title} tabIndex="0">
+        {projects.map((project, index) => (
+          <article className={`project-card reveal-card scroll-reveal-item reveal-delay-${index + 2}`} key={project.title} tabIndex="0">
             <div className="project-card-content reveal-card-content">
               <h3>{project.title}</h3>
               <p className="mono-copy">{project.meta}</p>
@@ -32,6 +34,6 @@ export default function Projects() {
           </article>
         ))}
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "../scroll-reveal/page";
 
 const socialLinks = [
   {
@@ -23,19 +24,19 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <section className="hero-section" id="intro">
+    <ScrollReveal className="hero-section" id="intro">
       <div className="hero-layout">
         <div className="hero-content">
-          <p className="hero-kicker">Hi, I&apos;m Rajvi Panchal.</p>
-          <h1>
+          <p className="hero-kicker scroll-reveal-item reveal-delay-1">Hi, I&apos;m Rajvi Panchal.</p>
+          <h1 className="scroll-reveal-item reveal-delay-2">
             Frontend Engineer
             <br />
             and Aspiring AI Engineer.
           </h1>
-          <p className="hero-copy">
+          <p className="hero-copy scroll-reveal-item reveal-delay-3">
             Master&apos;s student in Artificial Intelligence at the University of East Anglia, passionate about building AI-powered and web applications. Currently seeking an opportunity as an AI Software Engineer, Machine Learning Engineer, or Frontend Developer to apply my skills, contribute to innovative projects, and grow as a software engineer.
           </p>
-          <div className="hero-socials" aria-label="Social profiles">
+          <div className="hero-socials scroll-reveal-item reveal-delay-4" aria-label="Social profiles">
             {socialLinks.map((link) => (
               <a
                 className="hero-social-link"
@@ -51,7 +52,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <figure className="hero-photo-frame" aria-label="Portrait of Rajvi Panchal">
+        <figure className="hero-photo-frame scroll-reveal-item reveal-delay-5" aria-label="Portrait of Rajvi Panchal">
           <Image
             src="/profile-photo.jpeg"
             alt="Rajvi Panchal"
@@ -62,6 +63,6 @@ export default function Hero() {
           />
         </figure>
       </div>
-    </section>
+    </ScrollReveal>
   );
 }

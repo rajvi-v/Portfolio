@@ -1,3 +1,5 @@
+import ScrollReveal from "../scroll-reveal/page";
+
 const experiences = [
   {
     company: "IceCube Digital",
@@ -23,20 +25,18 @@ const experiences = [
 
 export default function Credentials() {
   return (
-    <section className="current-section" id="experience">
-      <h2 className="section-label">EXPERIENCE</h2>
+    <ScrollReveal className="current-section" id="experience">
+      <h2 className="section-label scroll-reveal-item reveal-delay-1">EXPERIENCE</h2>
       <div className="experience-grid">
-        {experiences.map((experience) => (
-          <article className="experience-card" key={experience.company} tabIndex="0">
+        {experiences.map((experience, index) => (
+          <article className={`experience-card scroll-reveal-item reveal-delay-${index + 2}`} key={experience.company} tabIndex="0">
             <div className="experience-card-content">
               <span className="experience-date">{experience.period}</span>
               <h3>{experience.company}</h3>
               <p className="experience-role">
                 {experience.role} / {experience.location}
               </p>
-                            <span className="card-hint">View details</span>
-
-
+              <span className="card-hint">View details</span>
             </div>
 
             <div className="experience-card-details">
@@ -46,6 +46,6 @@ export default function Credentials() {
           </article>
         ))}
       </div>
-    </section>
+    </ScrollReveal>
   );
 }
