@@ -34,7 +34,7 @@ export default function Hero() {
             and Aspiring AI Engineer.
           </h1>
           <p className="hero-copy scroll-reveal-item reveal-delay-3">
-            Master&apos;s student in Artificial Intelligence at the University of East Anglia, passionate about building AI-powered web applications. Currently seeking an opportunity as an AI Engineer, Machine Learning Engineer and Frontend Developer to apply my skills, contribute to innovative projects.
+            Master&apos;s student in Artificial Intelligence at the University of East Anglia, passionate about building AI-powered web applications. Currently seeking an opportunity as an AI Engineer, ML Engineer and Frontend Developer to apply my skills, contribute to innovative projects.
           </p>
           <div className="hero-socials scroll-reveal-item reveal-delay-4" aria-label="Social profiles">
             {socialLinks.map((link) => (

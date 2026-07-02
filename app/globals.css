@@ -25,10 +25,13 @@
 }
 
 html {
+  width: 100%;
+  min-width: 320px;
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   min-width: 320px;
   margin: 0;
   background:
@@ -89,11 +92,14 @@ a {
 }
 
 .site-shell {
-  width: min(100%, 1120px);
+  width: 100%;
+  max-width: none;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 64px 56px 40px;
-  background: var(--background);
+  margin: 0;
+  padding: 64px clamp(32px, 4vw, 96px) 40px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(47, 255, 214, 0.055), transparent 28%),
+    var(--background);
 }
 
 .site-header {
@@ -664,6 +670,88 @@ a {
   font-size: 13px;
   line-height: 1.55;
 }
+
+.project-card {
+  display: block;
+}
+
+.project-output-shell {
+  display: grid;
+  gap: 34px;
+}
+
+.output-back-link {
+  width: max-content;
+  color: var(--accent);
+  font-family: var(--font-geist-mono), Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.45;
+  text-transform: uppercase;
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+
+.output-back-link:hover,
+.output-back-link:focus-visible {
+  color: var(--foreground);
+  text-shadow: 0 0 22px var(--accent-glow);
+  outline: none;
+}
+
+.project-output-hero {
+  max-width: 780px;
+  padding-top: 34px;
+}
+
+.project-output-hero .section-label {
+  margin-bottom: 24px;
+}
+
+.project-output-hero h1 {
+  max-width: 720px;
+  margin: 0 0 22px;
+  color: var(--foreground);
+  font-size: clamp(42px, 8vw, 82px);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.project-output-hero > p:last-child {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.output-image-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(222, 222, 222, 0.14);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36), 0 0 32px rgba(47, 255, 214, 0.12);
+}
+
+.output-image-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 12% 0%, var(--accent-soft), transparent 30%);
+  opacity: 0.48;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.output-screenshot {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .site-footer {
   display: grid;
   gap: 44px;
@@ -903,6 +991,27 @@ a {
 
   .footer-contact {
     min-width: 0;
+  }
+
+  .project-output-shell {
+    gap: 28px;
+    padding-top: 42px;
+  }
+
+  .project-output-hero {
+    padding-top: 18px;
+  }
+
+  .project-output-hero h1 {
+    font-size: clamp(36px, 14vw, 58px);
+  }
+
+  .project-output-hero > p:last-child {
+    font-size: 15px;
+  }
+
+  .output-image-panel {
+    border-radius: 6px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

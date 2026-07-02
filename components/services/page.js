@@ -13,11 +13,11 @@ const services = [
     description:
       "I build production-ready frontends with React.js and Next.js, including server-side rendering, optimized components, and responsive interfaces for ecommerce and web platforms.",
   },
-  {
-    icon: "{}",
-    title: "State management and user flows",
+   {
+    icon: "API",
+    title: "API integration and testing",
     description:
-      "I use Redux and Redux Toolkit to manage complex multi-page flows, keep data consistent, and reduce UI bugs across interactive applications.",
+      "I connect frontend applications with backend services through RESTful APIs and use Postman to test, validate, and stabilize frontend-to-backend communication.",
   },
   {
     icon: "$",
@@ -25,17 +25,18 @@ const services = [
     description:
       "I have developed complete ecommerce checkout systems and integrated Stripe.js for secure payment processing and reliable transaction experiences.",
   },
-  {
-    icon: "API",
-    title: "API integration and testing",
-    description:
-      "I connect frontend applications with backend services through RESTful APIs and use Postman to test, validate, and stabilize frontend-to-backend communication.",
-  },
+ 
   {
     icon: "DB",
     title: "Databases and realtime data",
     description:
       "I have worked with MongoDB and Firebase, including Firestore and Auth, to support scalable storage, realtime synchronization, and reliable application data.",
+  },
+  {
+    icon: "{}",
+    title: "State management and user flows",
+    description:
+      "I use Redux and Redux Toolkit to manage complex multi-page flows, keep data consistent, and reduce UI bugs across interactive applications.",
   },
 ];
 
