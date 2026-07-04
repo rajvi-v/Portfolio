@@ -3,11 +3,7 @@ import Header from "@/components/header/page";
 import Image from "next/image";
 import Link from "next/link";
 
-const heroMetrics = [
-  { value: "3", label: "AI tasks" },
-  { value: "API", label: "National Rail data" },
-  { value: "KB", label: "expert system" },
-];
+
 
 const projectSteps = [
   "Built a FastAPI railway chatbot with a browser chat interface for guided railway assistance.",
@@ -68,15 +64,6 @@ export default function IntelligentRailwayChatbotOutput() {
             Built a conversational railway assistant that can search for ticket options, support delay prediction, and retrieve expert disruption guidance for railway scenarios.
             </p>
           </div>
-
-          <dl className="project-metric-rail" aria-label="Intelligent railway chatbot project metrics">
-            {heroMetrics.map((metric) => (
-              <div className="project-metric" key={metric.label}>
-                <dt>{metric.label}</dt>
-                <dd>{metric.value}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
