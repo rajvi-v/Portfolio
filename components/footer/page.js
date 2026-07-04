@@ -1,10 +1,10 @@
 import ScrollReveal from "../scroll-reveal/page";
 
 const footerLinks = [
-  { label: "About Me", href: "#intro" },
-  { label: "Skills", href: "#services" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "About Me", href: "/#intro" },
+  { label: "Skills", href: "/#services" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
 ];
 
 const socialLinks = [
@@ -44,3 +44,4 @@ export default function Footer() {
     </ScrollReveal>
   );
 }
+

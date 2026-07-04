@@ -1,10 +1,11 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import ScrollReveal from "../scroll-reveal/page";
 
 const projects = [
   {
     title: "Intelligent Railway Chatbot",
     meta: "Python, National Rail API, machine learning, expert systems",
+    href: "/projects/intelligent-railway-chatbot",
     description:
       "Built a conversational railway assistant that collects journey details, searches for the cheapest available train tickets, provides booking links, predicts delays, and recommends contingency actions for railway staff.",
   },
@@ -27,9 +28,9 @@ function ProjectCard({ project, index }) {
         <span className="card-hint">{project.href ? "View output" : "View details"}</span>
       </div>
 
-      <div className="project-card-details reveal-card-details">
+      {/* <div className="project-card-details reveal-card-details">
         <p>{project.description}</p>
-      </div>
+      </div> */}
     </>
   );
 
@@ -60,3 +61,5 @@ export default function Projects() {
     </ScrollReveal>
   );
 }
+
+
