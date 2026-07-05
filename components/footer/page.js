@@ -17,14 +17,13 @@ export default function Footer() {
     <ScrollReveal as="footer" className="site-footer" id="footer">
       <div className="footer-main">
         <div className="scroll-reveal-item reveal-delay-1">
-          <p className="footer-kicker">BASED IN NORWICH, UNITED KINGDOM</p>
+          <p className="footer-kicker">BASED IN UNITED KINGDOM</p>
           <h2>Let&apos;s build modern web experiences with clean frontend engineering.</h2>
         </div>
 
         <div className="footer-contact scroll-reveal-item reveal-delay-2">
           <span className="footer-title">Contact</span>
           <a href="mailto:rajvipanchal91@gmail.com">rajvipanchal91@gmail.com</a>
-          <a href="tel:+447799377294">+44 7799377294</a>
           {socialLinks.map((link) => (
             <a href={link.href} key={link.label} target="_blank" rel="noreferrer">
               {link.label}

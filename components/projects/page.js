@@ -25,7 +25,7 @@ function ProjectCard({ project, index }) {
       <div className="project-card-content reveal-card-content">
         <h3>{project.title}</h3>
         <p className="mono-copy">{project.meta}</p>
-        <span className="card-hint">{project.href ? "View output" : "View details"}</span>
+        <span className="card-hint">{project.href ? "View Details" : "View Output"}</span>
       </div>
 
       {/* <div className="project-card-details reveal-card-details">

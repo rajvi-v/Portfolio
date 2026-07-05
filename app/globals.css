@@ -390,6 +390,11 @@ a {
   transform: translateY(-10px);
 }
 
+.project-card:hover .reveal-card-content,
+.project-card:focus-visible .reveal-card-content {
+  opacity: 1;
+}
+
 .reveal-card:hover .reveal-card-details,
 .reveal-card:focus-visible .reveal-card-details {
   opacity: 1;
